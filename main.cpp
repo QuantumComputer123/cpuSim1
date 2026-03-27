@@ -103,7 +103,7 @@ int executeStep(vector<byte>& instructions, array<byte, 65536>& memory, array<by
 }
 
 int main() { 
-    vector<byte> instructions = { 0x02, 0x01, 0x15, 0xFF };
+    vector<byte> instructions = { 0x02, 0x01, 0x15, 0x02, 0x02, 0x05, 0x06, 0x03, 0x02, 0x01, 0xFF };
     array<byte, 65536> memory = {};
     array<byte, 16> registers = {}; // R0 is always 0, RF (R15) is the pc
 
