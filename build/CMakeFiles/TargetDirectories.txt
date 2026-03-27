@@ -1,0 +1,3 @@
+/Users/param/VSCode/c++Stuff/cpu/cpuSim1/build/CMakeFiles/main.dir
+/Users/param/VSCode/c++Stuff/cpu/cpuSim1/build/CMakeFiles/edit_cache.dir
+/Users/param/VSCode/c++Stuff/cpu/cpuSim1/build/CMakeFiles/rebuild_cache.dir

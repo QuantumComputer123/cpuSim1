@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/param/VSCode/c++Stuff/cpu/cpuSim1/build",
+  "command": "/opt/homebrew/opt/llvm/bin/clang++  -I/Users/param/VSCode/c++Stuff/cpu/cpuSim1 -isystem /opt/homebrew/include -g -arch arm64 -O3 -I/opt/homebrew/Cellar/raylib/5.5/include -o CMakeFiles/main.dir/main.cpp.o -c /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cpp",
+  "file": "/Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]
