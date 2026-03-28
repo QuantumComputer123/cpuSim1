@@ -1,0 +1,3 @@
+STI x00 xF7 xFF
+STI x01 xF7 x88
+HALT

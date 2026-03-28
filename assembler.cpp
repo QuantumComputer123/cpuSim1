@@ -14,7 +14,8 @@ std::unordered_map<string, uint8_t> opcodes = {
     {"ST",   0x03}, {"STI",  0x04}, {"NOT",  0x05},
     {"ADD",  0x06}, {"SUB",  0x07}, {"MUL",  0x08},
     {"DIV",  0x09}, {"AND",  0x0A}, {"OR",   0x0B},
-    {"XOR",  0x0C}, {"NOP",  0xFE}, {"HALT", 0xFF}
+    {"XOR",  0x0C}, {"JMP",  0x0D}, {"JZ",  0x0E},
+    {"JNZ",  0x0F}, {"NOP",  0xFE}, {"HALT", 0xFF}
 };
 
 int keywordToInt(string keyword) {
@@ -26,9 +27,21 @@ int keywordToInt(string keyword) {
         } catch (...) { return -1; }
     }
 
+     if (keyword[0] == 'm' || keyword[0] == 'M') {
+        try {
+            return std::stoi(keyword.substr(1), 0);
+        } catch (...) { return -1; }
+    }
+
     if (keyword[0] == 'x' || keyword[0] == 'X') {
         try {
             return std::stoi("0x" + keyword.substr(1), nullptr, 16);
+        } catch (...) { return -1; }
+    }
+
+    if (keyword[0] == 'd' || keyword[0] == 'D') {
+        try {
+            return std::stoi(keyword.substr(1));
         } catch (...) { return -1; }
     }
 

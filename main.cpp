@@ -29,11 +29,17 @@ MEM is 2 bytes long, pass in as 2 values
 0x0A AND: REG1, REG2, REG3 : REG1 <- REG2 & REG3
 0x0B OR: REG1, REG2, REG3 : REG1 <- REG2 | REG3
 0x0C XOR: REG1, REG2, REG3 : REG1 <- REG2 ^ REG3
+0x0D JMP: NUM : PC <- NUM
+0x0E JZ: NUM : ZERO ? PC <- NUM
+0x0F JNZ: NUM : !ZERO ? PC <- NUM
 
 0xFE NOP
 0xFF HALT
+
+cd build && ../assembler ../test.sim && ./main ../test.bin
 */
 
+const bool debug = false;
 const int screenWidth = 32;
 const int screenHeight = 24;
 const int pixelSize = 35;
@@ -41,7 +47,10 @@ const int pixelSize = 35;
 vector<byte> readBinaryFile(const string& filename) {
     std::ifstream file(filename, std::ios::binary | std::ios::ate);
     
-    if (!file.is_open()) return {};
+    if (!file.is_open()) {
+        std::cout << "no open file\n";
+        return {};
+    }
 
     std::streamsize size = file.tellg();
     if (size <= 0) return {};
@@ -146,14 +155,20 @@ int numArgs(int op) {
         return 1;
     default:
         if (op >= 6 && op <= 13) return 3;
+        if (op >= 13 && op <= 15) return 1;
         return 0;
         break;
     }
 }
 
-bool debug = true;
+void updateFlags(bitset<8>& flags, byte registerNum) {
+    bitset<8> reg = byteToBitset(registerNum);
 
-int executeStep(vector<byte>& instructions, array<byte, 65536>& memory, array<byte, 16>& registers, int& pc) {
+    if (reg.to_ulong() == 0) flags.set(0, true);
+    if (reg.to_ulong() != 0) flags.set(0, false);
+}
+
+int executeStep(vector<byte>& instructions, array<byte, 65536>& memory, array<byte, 16>& registers, int& pc, bitset<8>& flags) {
     if (instructions.empty()) {
         std::cout << "Error: No instructions loaded\n";
         return 2;
@@ -174,9 +189,15 @@ int executeStep(vector<byte>& instructions, array<byte, 65536>& memory, array<by
         case 10: registers[instructions[pc+1]] = bitsetToByte(byteToBitset(registers[instructions[pc+2]]) & byteToBitset(registers[instructions[pc+3]])); break; // AND
         case 11: registers[instructions[pc+1]] = bitsetToByte(byteToBitset(registers[instructions[pc+2]]) | byteToBitset(registers[instructions[pc+3]])); break; // OR
         case 12: registers[instructions[pc+1]] = bitsetToByte(byteToBitset(registers[instructions[pc+2]]) ^ byteToBitset(registers[instructions[pc+3]])); break; // XOR
+        case 13: pc = instructions[pc+1]; return 0; break;
+        case 14: if (flags.test(0)) { pc = instructions[pc+1]; return 0; break; }
+        case 15: if (!flags.test(0)) { pc = instructions[pc+1]; return 0; break; }
         case 254: break; // NOP
         case 255: return 1; break; // HALT, successful execution
         default: return 2; break; // syntax error
+    }
+    if (currentInstruction != 3 && currentInstruction != 4 && currentInstruction < 13) {
+        (flags, registers[instructions[pc+1]]);
     }
     pc += numArgs(currentInstruction);
     ++pc;
@@ -196,6 +217,7 @@ int main(int argc, char *argv[]) {
     vector<byte> instructions = readBinaryFile(argv[1]);
     array<byte, 65536> memory = {};
     array<byte, 16> registers = {}; 
+    bitset<8> flags = 0;
 
     if (instructions.empty()) {
         std::cerr << "Error: Could not read " << argv[1] << " or file is empty." << std::endl;
@@ -219,7 +241,7 @@ int main(int argc, char *argv[]) {
         float currentTime = GetTime();
 
         if (currentTime - lastCpuTime >= cpuInterval) {
-            executeStep(instructions, memory, registers, pc);
+            executeStep(instructions, memory, registers, pc, flags);
             updatePressedKeys(memory);
             lastCpuTime = currentTime;
         }
