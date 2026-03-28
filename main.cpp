@@ -14,13 +14,6 @@ typedef u_char byte;
 
 /* INSTRUCTIONS
 
-MEM is 2 bytes long, pass in as 2 values, highest value on right
-Last 3 * w * h bytes of memory are used for memory, in the order
-r1, g1, b1, r2, g2, b2...
-where r, g, and b are the colors and 1, 2, 3.. are the pixel
-EX: LDI x00 xF7 xFF (store 255 into memory[0xF700])
-assuming 32x24 (width to height), puts red in the top left
-
 0x00 MOV: REG1, REG2 : REG1 <- REG2
 0x01 LD: REG1, MEM : REG1 <- MEM
 0x02 LDI: REG1, NUM : REG1 <- NUM
@@ -37,9 +30,6 @@ assuming 32x24 (width to height), puts red in the top left
 0x0D JMP: NUM : PC <- NUM
 0x0E JZ: NUM : ZERO ? PC <- NUM
 0x0F JNZ: NUM : !ZERO ? PC <- NUM
-
-0xFE NOP
-0xFF HALT
 
 cd build && ../assembler ../test.sim && ./main ../test.bin
 */
