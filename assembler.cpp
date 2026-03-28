@@ -3,18 +3,19 @@
 #include <cstdint>
 #include <string>
 #include <unordered_map>
+#include <sstream> // Required for stringstream parsing
 
 using std::string;
 
 const int memSize = 65536;
-const int vMemSize = 2304;
+const int vMemSize = 24 * 32 * 3;
 
 std::unordered_map<string, uint8_t> opcodes = {
     {"MOV",  0x00}, {"LD",   0x01}, {"LDI",  0x02},
     {"ST",   0x03}, {"STI",  0x04}, {"NOT",  0x05},
     {"ADD",  0x06}, {"SUB",  0x07}, {"MUL",  0x08},
     {"DIV",  0x09}, {"AND",  0x0A}, {"OR",   0x0B},
-    {"XOR",  0x0C}, {"JMP",  0x0D}, {"JZ",  0x0E},
+    {"XOR",  0x0C}, {"JMP",  0x0D}, {"JZ",   0x0E},
     {"JNZ",  0x0F}, {"NOP",  0xFE}, {"HALT", 0xFF}
 };
 
@@ -27,9 +28,9 @@ int keywordToInt(string keyword) {
         } catch (...) { return -1; }
     }
 
-     if (keyword[0] == 'm' || keyword[0] == 'M') {
+    if (keyword[0] == 'm' || keyword[0] == 'M') {
         try {
-            return std::stoi(keyword.substr(1), 0);
+            return std::stoi("0x" + keyword.substr(1), nullptr, 16);
         } catch (...) { return -1; }
     }
 
@@ -55,25 +56,40 @@ int keywordToInt(string keyword) {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc > 1) {
-        if (((string)argv[1]).length() < 5) {
-            std::cerr << "error with filename\n";
-        }
-        std::ifstream inFile(argv[1]);
-        string outputFilename = ((string)argv[1]).substr(0, ((string)argv[1]).length() - 4).append(".bin");
-        std::ofstream outFile(outputFilename, std::ios::out | std::ios::binary);
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " <filename.sim>" << std::endl;
+        return 1;
+    }
 
-        if (!inFile.is_open()) {
-            std::cerr << "Error: Could not open .sim file" << std::endl;
-            return 1;
-        }
-        if (!outFile.is_open()) {
-            std::cerr << "Error: Could not create .bin file" << std::endl;
-            return 1;
+    string inputPath = argv[1];
+    if (inputPath.length() < 5) {
+        std::cerr << "Error: Invalid filename (too short)" << std::endl;
+        return 1;
+    }
+
+    std::ifstream inFile(inputPath);
+    string outputFilename = inputPath.substr(0, inputPath.length() - 4).append(".bin");
+    std::ofstream outFile(outputFilename, std::ios::out | std::ios::binary);
+
+    if (!inFile.is_open()) {
+        std::cerr << "Error: Could not open .sim file" << std::endl;
+        return 1;
+    }
+    if (!outFile.is_open()) {
+        std::cerr << "Error: Could not create .bin file" << std::endl;
+        return 1;
+    }
+
+    string line;
+    while (std::getline(inFile, line)) {
+        size_t commentPos = line.find(";");
+        if (commentPos != string::npos) {
+            line = line.substr(0, commentPos);
         }
 
+        std::stringstream ss(line);
         string word;
-        while (inFile >> word) {
+        while (ss >> word) {
             int value = keywordToInt(word);
             
             if (value != -1) {
@@ -82,11 +98,11 @@ int main(int argc, char *argv[]) {
                 std::cout << "Assembled: " << word << " -> " << (int)byteOut << std::endl;
             }
         }
-
-        std::cout << "Assembly complete. Check output.bin" << std::endl;
-
-        inFile.close();
-        outFile.close();
-        return 0;
     }
+
+    std::cout << "Assembly complete. Check " << outputFilename << std::endl;
+
+    inFile.close();
+    outFile.close();
+    return 0;
 }

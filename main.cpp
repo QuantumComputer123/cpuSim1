@@ -14,7 +14,12 @@ typedef u_char byte;
 
 /* INSTRUCTIONS
 
-MEM is 2 bytes long, pass in as 2 values
+MEM is 2 bytes long, pass in as 2 values, highest value on right
+Last 3 * w * h bytes of memory are used for memory, in the order
+r1, g1, b1, r2, g2, b2...
+where r, g, and b are the colors and 1, 2, 3.. are the pixel
+EX: LDI x00 xF7 xFF (store 255 into memory[0xF700])
+assuming 32x24 (width to height), puts red in the top left
 
 0x00 MOV: REG1, REG2 : REG1 <- REG2
 0x01 LD: REG1, MEM : REG1 <- MEM
@@ -39,7 +44,7 @@ MEM is 2 bytes long, pass in as 2 values
 cd build && ../assembler ../test.sim && ./main ../test.bin
 */
 
-const bool debug = false;
+const bool debug = true;
 const int screenWidth = 32;
 const int screenHeight = 24;
 const int pixelSize = 35;
@@ -152,7 +157,7 @@ int numArgs(int op) {
         break;
     case 254:
     case 255:
-        return 1;
+        return 0;
     default:
         if (op >= 6 && op <= 13) return 3;
         if (op >= 13 && op <= 15) return 1;
@@ -161,8 +166,8 @@ int numArgs(int op) {
     }
 }
 
-void updateFlags(bitset<8>& flags, byte registerNum) {
-    bitset<8> reg = byteToBitset(registerNum);
+void updateFlags(bitset<8>& flags, byte registerA) {
+    bitset<8> reg = byteToBitset(registerA);
 
     if (reg.to_ulong() == 0) flags.set(0, true);
     if (reg.to_ulong() != 0) flags.set(0, false);
@@ -197,7 +202,7 @@ int executeStep(vector<byte>& instructions, array<byte, 65536>& memory, array<by
         default: return 2; break; // syntax error
     }
     if (currentInstruction != 3 && currentInstruction != 4 && currentInstruction < 13) {
-        (flags, registers[instructions[pc+1]]);
+        updateFlags(flags, registers[instructions[pc+1]]);
     }
     pc += numArgs(currentInstruction);
     ++pc;
@@ -225,10 +230,10 @@ int main(int argc, char *argv[]) {
     }
 
     float lastCpuTime = 0;
-    float cpuInterval = 1.0f / 10.0f;
+    float cpuInterval = 1.0f / 10.0f; // instructions/second
 
     float lastScreenTime = 0;
-    float screenInterval = 1.0f;
+    float screenInterval = 1.0f; // screen refresh rate
 
     int pc = 0;
 
