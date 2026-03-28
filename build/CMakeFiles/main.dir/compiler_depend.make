@@ -318,6 +318,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__charconv/traits.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/convert_to_timespec.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/duration.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/file_clock.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/high_resolution_clock.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/steady_clock.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/system_clock.h \
@@ -373,6 +374,22 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__exception/nested_exception.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__exception/operations.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__exception/terminate.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/copy_options.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/directory_entry.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/directory_iterator.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/directory_options.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/file_status.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/file_time_type.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/file_type.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/filesystem_error.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/operations.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/path.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/path_iterator.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/perm_options.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/perms.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/space_info.h \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/u8path.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__format/enable_insertable.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__format/fmt_pair_like.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__format/range_format.h \
@@ -765,9 +782,12 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/deque \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/errno.h \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/exception \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/filesystem \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/format \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/fstream \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/functional \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/initializer_list \
+  /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/iomanip \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/ios \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/iosfwd \
   /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/iostream \
@@ -822,8 +842,11 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
   /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include/limits.h \
   /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include/stdarg.h \
   /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include/stddef.h \
-  /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include/stdint.h
+  /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include/stdint.h \
+  /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
 
+
+/opt/homebrew/Cellar/raylib/5.5/include/raylib.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include/stddef.h:
 
@@ -853,25 +876,29 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/variant:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_caddr_t.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/typeinfo:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/underlying_type.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/type_traits:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/system_error:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/tuple:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/string_view:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/string.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/streambuf:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/stdlib.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/stdexcept:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__utility/no_destroy.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/ratio:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/stack:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/print:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/ostream:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/inout_ptr.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/new:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/copy_options.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/math.h:
 
@@ -885,9 +912,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/iostream:
 
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/iomanip:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_char_like_type.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/format:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/filesystem:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_aggregate.h:
 
@@ -1001,6 +1032,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_trivially_assignable.h:
 
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/path.h:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory_resource/polymorphic_allocator.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_swappable.h:
@@ -1033,8 +1066,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_empty.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/string_view:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_destructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_key_t.h:
@@ -1042,6 +1073,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_core_convertible.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_convertible.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/recursive_directory_iterator.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_constructible.h:
 
@@ -1058,8 +1091,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/count.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_class.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_callable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_size_t.h:
 
@@ -1123,9 +1154,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__tuple/ignore.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/iter_swap.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/optional:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/iter_swap.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__tuple/find_index.h:
 
@@ -1177,12 +1208,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__ranges/from_range.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/queue:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/destroy.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__ranges/enable_view.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__ranges/enable_borrowed_range.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/_types/_nl_item.h:
@@ -1217,6 +1242,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__node_handle:
 
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/fstream:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__new/placement_new_delete.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/maybe_const.h:
@@ -1224,8 +1251,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__new/nothrow_t.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__new/new_handler.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/print:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__new/launder.h:
 
@@ -1240,10 +1265,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/find.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/uses_allocator.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_id_t.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/string:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/unique_temporary_buffer.h:
 
@@ -1283,6 +1304,12 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_trivially_copyable.h:
 
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/queue:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__ranges/enable_view.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/destroy.h:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/compressed_pair.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/allocation_guard.h:
@@ -1294,8 +1321,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/addressof.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__mbstate_t.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/ratio:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_same.h:
 
@@ -1381,9 +1406,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/static_bounded_iter.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/duration.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/size.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/path_iterator.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/reverse_iterator.h:
 
@@ -1421,9 +1444,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_unqualified.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/disjunction.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/file_status.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/tuple:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/disjunction.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__math/error_functions.h:
 
@@ -1436,12 +1459,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/wait.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/concepts.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_dev_t.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/fstream.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/aliasing_iterator.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__hash_table:
 
@@ -1469,6 +1486,12 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/memory.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_dev_t.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/aliasing_iterator.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/fstream.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_u_int64_t.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/auto_ptr.h:
@@ -1487,13 +1510,31 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/weak_result_type.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/_locale_posix2008.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/reference_wrapper.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/unary_negate.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/binary_search.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/search.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/operations.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/ranges_operations.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__utility/unreachable.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__format/enable_insertable.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/not_fn.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/stack:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__utility/no_destroy.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/access.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__system_error/error_code.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__math/abs.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/malloc/_ptrcheck.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/mem_fun_ref.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/specialized_algorithms.h:
 
@@ -1509,19 +1550,23 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/is_transparent.h:
 
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__locale_dir/time.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__vector/pmr.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/hash.h:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/atomic:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libkern/arm/_OSByteOrder.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/function.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__ranges/all.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/subrange.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/fill_n.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/unwrap_iter.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__configuration/availability.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/boyer_moore_searcher.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/compose.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/copy_backward.h:
 
@@ -1530,22 +1575,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/binder2nd.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/binder1st.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/vector.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/qos.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/time_point.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_errno_t.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__new/align_val_t.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/pointer_to_binary_function.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/includes.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/invoke.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/upper_bound.h:
 
@@ -1560,6 +1589,32 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__locale_dir/support/apple.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/binary_negate.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/u8path.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/space_info.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/perms.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/_locale_posix2008.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/unary_negate.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/perm_options.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/filesystem_error.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/duration.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/size.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/transform.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/file_type.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_callable.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/directory_entry.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__exception/terminate.h:
 
@@ -1584,6 +1639,10 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__configuration/compiler.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/pair.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/boyer_moore_searcher.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__configuration/availability.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/wrap_iter.h:
 
@@ -1629,12 +1688,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__concepts/common_reference_with.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/subrange.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/unwrap_iter.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/compose.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__concepts/boolean_testable.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__utility/default_three_way_comparator.h:
@@ -1661,6 +1714,10 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__compare/synth_three_way.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_errno_t.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/time_point.h:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__math/exponential_functions.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__locale_dir/locale_base_api.h:
@@ -1668,6 +1725,14 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/is_sufficiently_aligned.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/high_resolution_clock.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__math/logarithms.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/iter_move.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_off_t.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__chrono/file_clock.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__compare/compare_three_way.h:
 
@@ -1678,8 +1743,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__charconv/to_chars_integral.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/pointer_to_unary_function.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/transform.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__bit/blsr.h:
 
@@ -1745,12 +1808,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__new/allocate.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__utility/unreachable.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__format/enable_insertable.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/not_fn.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__cstddef/ptrdiff_t.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/unwrap_range.h:
@@ -1766,6 +1823,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/ostream_iterator.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/operations.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_trivially_destructible.h:
 
@@ -1807,15 +1866,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/set_union.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/iterator_operations.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/rotate.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/stddef.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/prev.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/set_intersection.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/ranges_operations.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/search.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/ctype.h:
 
@@ -1833,9 +1890,9 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/reverse.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/types.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/default_searcher.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
@@ -1847,13 +1904,17 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/replace_copy_if.h:
 
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/stddef.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/iterator_operations.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/rotate.h:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/replace_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_u_int32_t.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__compare/compare_three_way_result.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/type_traits:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/erase_if_container.h:
 
@@ -1861,7 +1922,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/remove_if.h:
 
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/directory_iterator.h:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/iosfwd:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/pointer_to_binary_function.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__new/align_val_t.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/ranges_copy_n.h:
 
@@ -1870,6 +1937,10 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/ranges_copy.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/for_each.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/new:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/inout_ptr.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/prev_permutation.h:
 
@@ -1884,6 +1955,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/partition.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/machine/_types.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/directory_options.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/partial_sort_copy.h:
 
@@ -1912,8 +1985,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/back_insert_iterator.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/lower_bound.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_time_t.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__atomic/support/c11.h:
 
@@ -2001,12 +2072,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/copy_move_common.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/binary_search.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/operations.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__locale_dir/time.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__memory/allocator_arg_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/malloc/_malloc.h:
@@ -2069,8 +2134,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/signal.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/reference_wrapper.h:
-
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/machine/_mcontext.h:
@@ -2085,8 +2148,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__vector/vector.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/typeinfo:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_nlink_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/xlocale/_ctype.h:
@@ -2098,6 +2159,10 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/libkern/_OSByteOrder.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/cdefs.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__ranges/all.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/fill_n.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/negation.h:
 
@@ -2129,13 +2194,19 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__ostream/put_character_sequence.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_time_t.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/system_error:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/underlying_type.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_caddr_t.h:
+
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__concepts/class_or_enum.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_rune_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_u_int.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/streambuf:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_timeval.h:
 
@@ -2148,12 +2219,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/functional.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__math/inverse_hyperbolic_functions.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__math/logarithms.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/iter_move.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_off_t.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__charconv/tables.h:
 
@@ -2353,9 +2418,13 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__tuple/tuple_element.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__vector/pmr.h:
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/string:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/hash.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/_types/_id_t.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/invoke.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__algorithm/includes.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__atomic/fence.h:
 
@@ -2365,21 +2434,15 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/_types/_locale_t.h:
 
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__iterator/access.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__system_error/error_code.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__math/abs.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/malloc/_ptrcheck.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__functional/mem_fun_ref.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/arm/signal.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/type_identity.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/reference_constructs_from_temporary.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__fwd/vector.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sys/qos.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/_xlocale.h:
 
@@ -2398,8 +2461,6 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/AvailabilityVersions.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__type_traits/is_base_of.h:
-
-/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/string.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/unordered_map:
 
@@ -2442,6 +2503,8 @@ CMakeFiles/main.dir/main.cpp.o: /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cp
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/sched.h:
 
 /opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__concepts/invocable.h:
+
+/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1/__filesystem/file_time_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/usr/include/_types/_wctype_t.h:
 

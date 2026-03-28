@@ -4,7 +4,7 @@
 # compile CXX with /opt/homebrew/opt/llvm/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/param/VSCode/c++Stuff/cpu/cpuSim1 -isystem /opt/homebrew/include
+CXX_INCLUDES = -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 = -g -arch arm64 -O3 -I/opt/homebrew/Cellar/raylib/5.5/include
 

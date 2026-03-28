@@ -7,7 +7,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "raylib::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-raylib-Debug-c8a22a9dc627c4a1a955.json",
+					"jsonFile" : "target-raylib-Debug-1f44dfbb3d0ae5a15023.json",
 					"name" : "raylib",
 					"projectIndex" : 0
 				}
@@ -57,7 +57,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-0e1daeda5ecc8a1b2bfa.json",
+					"jsonFile" : "target-main-Debug-6f865245accb2c2c3d8f.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

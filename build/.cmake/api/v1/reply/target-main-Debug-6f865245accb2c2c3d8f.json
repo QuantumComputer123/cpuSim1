@@ -14,8 +14,7 @@
 			"target_link_libraries",
 			"set_target_properties",
 			"find_package",
-			"target_compile_options",
-			"target_include_directories"
+			"target_compile_options"
 		],
 		"files" : 
 		[
@@ -30,25 +29,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 15,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 24,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 8,
+				"line" : 9,
 				"parent" : 0
 			},
 			{
@@ -65,12 +64,6 @@
 				"command" : 4,
 				"file" : 0,
 				"line" : 14,
-				"parent" : 0
-			},
-			{
-				"command" : 5,
-				"file" : 0,
-				"line" : 16,
 				"parent" : 0
 			}
 		]
@@ -107,11 +100,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 8,
-					"path" : "/Users/param/VSCode/c++Stuff/cpu/cpuSim1"
-				},
-				{
-					"backtrace" : 8,
+					"backtrace" : 2,
 					"isSystem" : true,
 					"path" : "/opt/homebrew/include"
 				}

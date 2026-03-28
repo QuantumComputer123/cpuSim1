@@ -1,5 +1,5 @@
-CMakeFiles/main.dir/main.cpp.o: \
-  /Users/param/VSCode/c++Stuff/cpu/cpuSim1/main.cpp \
+CMakeFiles/main.dir/assembler.cpp.o: \
+  /Users/param/VSCode/c++Stuff/cpu/cpuSim1/assembler.cpp \
   /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/iostream \
   /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/__config \
   /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/__config_site \
@@ -840,5 +840,4 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/__filesystem/directory_options.h \
   /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/__filesystem/path_iterator.h \
   /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/__filesystem/u8path.h \
-  /opt/homebrew/Cellar/raylib/5.5/include/raylib.h
+  /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1/__filesystem/u8path.h
